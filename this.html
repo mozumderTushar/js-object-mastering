@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is not this ...... this is confusing this</h1>
+    <p onclick="this.innerText = 'I am easy'">I am confusing. Not click me</p>
+    <script>
+        const myObj = {
+         name: 'Karim Ullah',  
+         getFullName() {
+             console.log(this);
+             return this.name = name;
+         } 
+    }
+
+    const anotherObj = {
+        name: 'Rahim Ullah',
+    }
+
+    function add (a,b){
+        console.log(this);
+        return a + b;
+    }
+
+    // anotherObj.getFullName = myObj.getFullName;
+    // console.log(anotherObj.getFullName);
+
+    // myObj.getFullName();
+    // anotherObj.getFullName();
+    add(12,13);
+
+    anotherObj.sum = add;
+    anotherObj.sum()
+    </script>
+</body>
+
+</html>
